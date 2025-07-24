@@ -255,6 +255,12 @@
         .phase-border-yellow { border-left: 4px solid #eab308; }
         .phase-border-purple { border-left: 4px solid #a855f7; }
         .phase-border-orange { border-left: 4px solid #f97316; }
+        .phase-border-white { border-left: 4px solid #FEF8E6; }
+
+        .text-white-400 {
+            --tw-text-opacity: 1;
+            color: rgb(254 248 230 / var(--tw-text-opacity, 1));
+        }
 
         /* Metric cards */
         .metric-card {
@@ -374,7 +380,7 @@
                 <!-- Description -->
                 <div class="mt-8 max-w-2xl mx-auto relative z-20">
                     <p class="text-lg text-slate-300 leading-relaxed">
-                        A comprehensive framework for Securable Software Engineering, providing practical guidance for Software Engineers to build securable applications and for Application Security to impact securable outcomes.
+                        A framework for Securable Software Engineering, providing practical guidance for Software Engineers to build securable applications and for Application Security to impact securable outcomes.
                     </p>
                 </div>
 
@@ -401,7 +407,7 @@
                         About OWASP FIASSE
                     </h1>
                     <p class="text-xl text-slate-300 max-w-2xl mx-auto">
-                        Framework for Integrating Application Security Software Engineering
+                        Framework for Integrating Application Security into Software Engineering
                     </p>
                 </div>
 
@@ -410,7 +416,7 @@
                         <h3 class="text-cyan-400 text-xl font-semibold mb-4">What is FIASSE?</h3>
                         <div class="text-slate-300">
                             <p class="mb-4">
-                                FIASSE (/feiz/) is an OWASP project that provides a software-engineering-centric approach to building securable software.
+                                FIASSE (/feiz/) is an <a href="https://owasp.org/www-project-fiasse/">OWASP project</a> that provides a software-engineering-centric approach to building securable software.
                             </p>
                             <p>
                                 It combines practical software engineering methodologies with modern application security practices to create a framework that is effective and scalable.
@@ -436,36 +442,32 @@
                         Key Concepts
                     </h2>
                     
-                    Business Alignment: Application security alligns with the business of making software by participation in existing development chanels.
-                    Design Language: Attributes of secure code can be identified and specified without criptic security assurance jargon.
-                    Beyond Best Practices: Security concerns are satisfied using intentional activities in requiremnts, securable code, and assurance.
-
                     <div class="grid md:grid-cols-3 gap-6">
                         
                         <div class="card">
-                            <h4 class="text-cyan-400 text-lg font-semibold mb-3">No More Shoveling Left</h4>
+                            <h4 class="text-cyan-400 text-lg font-semibold mb-3">Business Alignment</h4>
                             <p class="text-slate-300">
-                                Apply practical, engineering-forward security advice for making software that is as enjoyable to secure as it is to use.
+                                Application Security aligns with the business of making software by participation in existing development channels. This means abandoning the "shovel-left" anti-pattern in favor of clearer communication and earlier collaboration.
                             </p>
 
                         </div>
 
                         <div class="card">
-                            <h4 class="text-cyan-400 text-lg font-semibold mb-3">Securable Software Engineering</h4>
+                            <h4 class="text-cyan-400 text-lg font-semibold mb-3">Beyond Best Practices</h4>
                             <p class="text-slate-300">
-                                A static state of "secure" is an illusion. Instead learn to build software with inherent qualities that enable it to remain protected in a constantly evolving threat landscape.
+                                Disciplined software engineering is fundamental to securable code. However, a complete approach accepts AppSec's role in requirements, acceptance and assurance.
+                            </p>
+
+                        </div>
+                        
+                        <div class="card">
+                            <h4 class="text-cyan-400 text-lg font-semibold mb-3">Participation over Assessment</h4>
+                            <p class="text-slate-300">
+                                Structured participation by Security in the development process yields better results than security assessment alone, which tends to be late and expensive.
                             </p>
                             
                         </div>
 
-                        <div class="card">
-                            <h4 class="text-cyan-400 text-lg font-semibold mb-3">Design Language</h4>
-                            <p class="text-slate-300">
-                                Intentionally use software engineering concepts to drive securable outcomes. Identify and cultivate characteristics that support security beyond simplily not having vulnerabilities.
-                            </p>
-
-                        </div>
-                        
                     </div>
                 </div>
 
@@ -475,7 +477,7 @@
                     </h2>
                     <div class="flex flex-wrap gap-2 justify-center">
                         <span class="badge">Design Language</span>
-                        <span class="badge">Native Development Extensions</span>
+                        <span class="badge">Security Extensions</span>
                         <span class="badge">Prompt Engineering Guidance</span>
                         <span class="badge">Keystone Practices</span>
                         <span class="badge">Principle Driven Security</span>
@@ -490,7 +492,7 @@
             <div class="container mx-auto max-w-6xl">
                 <div class="text-center mb-12">
                     <h1 class="text-4xl md:text-5xl font-bold text-cyan-400 mb-4">
-                        FIASSE Project Framework
+                        FIASSE Project
                     </h1>
                     <p class="text-xl text-slate-300 max-w-3xl mx-auto">
                         A methodology for integrating security into software engineering practices
@@ -500,13 +502,22 @@
                 <!-- Tabs -->
                 <div class="tab-list mb-8">
                     <button onclick="showProjectTab('overview')" id="project-tab-overview" class="tab-button active">Overview</button>
-                    <button onclick="showProjectTab('methodology')" id="project-tab-methodology" class="tab-button">Methodology</button>
+                    <button onclick="showProjectTab('methodology')" id="project-tab-methodology" class="tab-button">Expectations</button>
                     <button onclick="showProjectTab('implementation')" id="project-tab-implementation" class="tab-button">Implementation</button>
-                    <button onclick="showProjectTab('tools')" id="project-tab-tools" class="tab-button">Tools</button>
+                    <button onclick="showProjectTab('assurance')" id="project-tab-assurance" class="tab-button">Assurance</button>
                 </div>
 
                 <!-- Tab Content -->
                 <div id="project-tab-content-overview" class="tab-content">
+                    <div>
+                        <h2 class="text-3xl font-bold text-cyan-400 mb-6 text-center">
+                            Project Overview
+                        </h2>
+                        <p class="text-slate-300 mb-6 text-center">
+                            FIASSE is designed to align people, process and technology with the business of making software. It is meant to address the issues of perceived conflicting goals and the "shovel-left" anti-pattern.
+                            It was developed under the premise that software engineers can create securable code without also learning to be hackers.
+                        </p>
+                    </div>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="card">
                             <h3 class="text-cyan-400 text-xl font-semibold mb-4">Project Goals</h3>
@@ -514,13 +525,23 @@
                                 <div>
                                     <h4 class="font-semibold text-cyan-400 mb-2">Primary Objectives</h4>
                                     <ul class="space-y-2">
-                                        <li>• Integrate security practices into SDLC</li>
-                                        <li>• Provide actionable security guidelines</li>
-                                        <li>• Enable measurable security outcomes</li>
-                                        <li>• Support continuous improvement</li>
+                                        <li>• Practical software engineering guidance for securable software</li>
+                                        <li>• Application Security Guidance for efficiency and scale</li>
+                                        <li>• Guide adoption</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-cyan-400 mb-2">Target Audience</h4>
+                                    <ul class="space-y-2">
+                                        <li>• Software engineers seeking practical security guidance</li>
+                                        <li>• Application security professionals wanting to align with development</li>
+                                        <li>• Teams interested in establishing a solid engineering basis for a security</li>
+                                        <li>• Educators aiming to teach secure software engineering practices</li>
+                                        <li>• Development orgs who have received an OWASP SAMM score of 0</li>
                                     </ul>
                                 </div>
                             </div>
+                            
                         </div>
 
                         <div class="card">
@@ -529,12 +550,23 @@
                                 <div>
                                     <h4 class="font-semibold text-cyan-400 mb-2">Core Elements</h4>
                                     <ul class="space-y-2">
-                                        <li>• Security requirements analysis</li>
-                                        <li>• Threat modeling processes</li>
-                                        <li>• Secure coding guidelines</li>
-                                        <li>• Testing and validation</li>
+                                        <li>• SSEM: the articles of security from a software engineering perspective</li>
+                                        <li>• Securable software engineering activities</li>
+                                        <li>• Guidance for effective vulnerability remediation</li>
                                     </ul>
                                 </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-cyan-400 mb-2">Supporting Artifacts</h4>
+                                    <ul class="space-y-2">
+                                        <li>• SSEM influenced documents including checklists and templates</li>
+                                        <li>• Mapping and references pertaining to SSEM and related projects and frameworks</li>
+                                        <li>• Guidance for effective vulnerability remediation</li>
+                                        <li>• Primer/Introduction to FIASSE and SSEM with guide for teaching it</li>
+                                        <li>• A collection of use cases and patterns as ready-made starting points</li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -542,78 +574,209 @@
 
                 <div id="project-tab-content-methodology" class="tab-content" style="display: none;">
                     <div class="card">
-                        <h3 class="text-cyan-400 text-xl font-semibold mb-4">FIASSE Methodology</h3>
-                        <p class="text-slate-400 mb-6">A systematic approach to secure software development</p>
+                        <h3 class="text-cyan-400 text-xl font-semibold mb-4">Expectation FIASSE</h3>
+                        <p class="text-slate-400 mb-6">Set expectations in a way that organically leverages software engineering practices for optimum security outcomes</p>
                         <div class="grid md:grid-cols-2 gap-8">
                             <div>
-                                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Phase 1: Requirements & Planning</h3>
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Requirements</h3>
                                 <div class="space-y-3">
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">1</div>
                                         <div>
-                                            <h4 class="font-semibold">Security Requirements Analysis</h4>
-                                            <p class="text-sm text-slate-400">Define security objectives and constraints</p>
+                                            <h4 class="font-semibold">Security Requirements</h4>
+                                            <p class="text-sm text-slate-400">Create a comprehensive definition of security features (security is not implicit)</p>
                                         </div>
                                     </div>
                                     <div class="flex items-start space-x-3">
                                         <div class="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">2</div>
                                         <div>
                                             <h4 class="font-semibold">Threat Modeling</h4>
-                                            <p class="text-sm text-slate-400">Identify potential threats and vulnerabilities</p>
+                                            <p class="text-sm text-slate-400">Identify potential threats and vulnerabilities using a framework like STRIDE</p>
                                         </div>
                                     </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">3</div>
+                                        <div>
+                                            <h4 class="font-semibold">Threat Scenarios</h4>
+                                            <p class="text-sm text-slate-400">Identify potential threats and frame them as use cases</p>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Phase 2: Development & Implementation</h3>
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Planning</h3>
                                 <div class="space-y-3">
+                                                                        
                                     <div class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-pink-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">3</div>
+                                        <div class="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">4</div>
                                         <div>
-                                            <h4 class="font-semibold">Secure Coding</h4>
-                                            <p class="text-sm text-slate-400">Apply security best practices in code</p>
+                                            <h4 class="font-semibold">Acceptance Criteria</h4>
+                                            <p class="text-sm text-slate-400">Define what it looks like when the product is protected from threats</p>
                                         </div>
                                     </div>
+
                                     <div class="flex items-start space-x-3">
-                                        <div class="w-6 h-6 bg-pink-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">4</div>
+                                        <div class="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">5</div>
                                         <div>
-                                            <h4 class="font-semibold">Security Testing</h4>
-                                            <p class="text-sm text-slate-400">Comprehensive security testing strategy</p>
+                                            <h4 class="font-semibold">Negative Unit Tests</h4>
+                                            <p class="text-sm text-slate-400">Check boundaries and invalid input for expected failures</p>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
 
                 <div id="project-tab-content-implementation" class="tab-content" style="display: none;">
                     <div class="card">
-                        <h3 class="text-cyan-400 text-xl font-semibold mb-4">Implementation Roadmap</h3>
-                        <p class="text-slate-400 mb-6">Step-by-step guide to adopting FIASSE</p>
-                        <div class="space-y-6">
-                            <div class="phase-border-cyan pl-6">
-                                <h3 class="text-xl font-semibold text-cyan-400 mb-2">Phase 1: Assessment</h3>
-                                <p class="mb-4">Evaluate current security posture and identify gaps</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="badge">Security Audit</span>
-                                    <span class="badge">Risk Assessment</span>
-                                    <span class="badge">Gap Analysis</span>
-                                </div>
-                            </div>
+                        <h3 class="text-cyan-400 text-xl font-semibold mb-4">Implementation</h3>
+                        <p class="text-slate-400 mb-6">Encourage Software Engineering as a discipline to improve software security posture.</p>
+                        <div class="grid md:grid-cols-2 gap-8">
                             
-                            <div class="phase-border-pink pl-6">
-                                <h3 class="text-xl font-semibold text-pink-400 mb-2">Phase 2: Planning</h3>
-                                <p class="mb-4">Develop security integration strategy and timeline</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="badge">Security Strategy</span>
-                                    <span class="badge">Team Training</span>
-                                    <span class="badge">Tool Selection</span>
+                            <div>
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Architecture & Design</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">1</div>
+                                        <div>
+                                            <h4 class="font-semibold">Securable Software Engineering Model</h4>
+                                            <p class="text-sm text-slate-400">Address SSEM attributes to the applicable degree</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">2</div>
+                                        <div>
+                                            <h4 class="font-semibold">"What can go wrong?"</h4>
+                                            <p class="text-sm text-slate-400">Actively assess what can go wrong with every change</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">3</div>
+                                        <div>
+                                            <h4 class="font-semibold">Strategic Control</h4>
+                                            <p class="text-sm text-slate-400">Be explicit about where trust boundaries are and how they are intended to be handled so flexibility can thrive</p>
+                                        </div>
+                                    </div>
+                                     
                                 </div>
                             </div>
+
+                            <div>
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-4">Code</h3>
+                                <div class="space-y-3">
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">1</div>
+                                        <div>
+                                            <h4 class="font-semibold">Securable Software Engineering</h4>
+                                            <p class="text-sm text-slate-400">Actively resilient software driven by software engineering principles</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">2</div>
+                                        <div>
+                                            <h4 class="font-semibold">Intentional Dependency Management</h4>
+                                            <p class="text-sm text-slate-400">Conscious choice to fully adopt or fork individual dependencies</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <div class="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-sm mt-1">3</div>
+                                        <div>
+                                            <h4 class="font-semibold">Merge Request Reviews</h4>
+                                            <p class="text-sm text-slate-400">A mentoring program in the focused context of code changes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
+                <div id="project-tab-content-assurance" class="tab-content" style="display: none;">
+                    <div class="card">
+                        <h3 class="text-cyan-400 text-xl font-semibold mb-4">Security Assurance</h3>
+                        <p class="text-slate-400 mb-6">Assurance activities play an integral role in being deliberate about business risks</p>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            
+                            <div class="phase-border-cyan pl-3">
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-2">Vulnerability Analysis</h3>
+                                <p class="mb-4">
+                                    Vulnerability trend and class analysis with root cause investigation and vulnerability verification to avoid "shoveling left". Includes standard AppSec analysis types for comprehensive coverage.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">Root Cause</span>
+                                    <span class="badge">Exploitability</span>
+                                    <span class="badge">Risk Analysis</span>
+                                    <span class="badge">Collaborative Remediation</span>
+                                    <span class="badge">Vulnerability Correlation</span>
+                                    <span class="badge">Attack Surface Analysis</span>
+                                </div>
+                            </div>
+                            
+                            <div class="phase-border-green pl-3">
+                                <h3 class="text-xl font-semibold text-green-400 mb-2">Training</h3>
+                                <p class="mb-4">Role specific, practical training for developers</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">Product</span>
+                                    <span class="badge">Architecture & Design</span>
+                                    <span class="badge">Software Engineering</span>
+                                    <span class="badge">Quality Assurance</span>
+                                </div>
+                            </div>
+                             
+                            <div class="phase-border-white pl-3">
+                                <h3 class="text-xl font-semibold text-white-400 mb-2">Program Assessment</h3>
+                                <p class="mb-4">Point in time assessment of Application Security process and program effectiveness</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">OWASP SAMM</span>
+                                    <span class="badge">OWASP ASVS</span>
+                                    <span class="badge">BSIMM</span>
+                                    <span class="badge">NIST SSDF</span>
+                                    <span class="badge">ISO/IEC 27034</span>
+                                    <span class="badge">CIS Controls</span>
+                                    <span class="badge">PCI Secure SLC</span>
+                                </div>
+                            </div>
+                            
+                            <div class="phase-border-cyan pl-3">
+                                <h3 class="text-xl font-semibold text-cyan-400 mb-2">Automated Application Security Testing</h3>
+                                <p class="mb-4">Fast and affordable testing to identify basic security vulnerabilities</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">SAST</span>
+                                    <span class="badge">DAST</span>
+                                    <span class="badge">SCA</span>
+                                    <span class="badge">IAST</span>
+                                    <span class="badge">RASP</span>
+                                    <span class="badge">IaC Scanning</span>
+                                    <span class="badge">Secrets Scanning</span>
+                                    <span class="badge">API Security Testing</span>
+                                    <span class="badge">Configuration Analysis</span>
+                                </div>
+                            </div>
+                            
+                            <div class="phase-border-pink pl-3">
+                                <h3 class="text-xl font-semibold text-pink-400 mb-2">Manual Pentesting</h3>
+                                <p class="mb-4">
+                                    Hands-on process to attempt to uncover complex issues that tools often miss.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge">Expert Analysis</span>
+                                    <span class="badge">Business Logic Testing</span>
+                                    <span class="badge">Exploit Validation</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                
 
                 <div id="project-tab-content-tools" class="tab-content" style="display: none;">
                     <div class="grid md:grid-cols-2 gap-8">
@@ -662,17 +825,15 @@
                         A model that identifies fundamental and universal attributes that are the building blocks of securable software.
                     </p>
                     <div class="flex justify-center">
-                        <span class="badge text-lg px-4 py-2">SSEM v0.8</span>
+                        <span class="badge text-lg px-4 py-2">SSEM v1.0.1</span>
                     </div>
                 </div>
 
                 <!-- SSEM Tabs -->
                 <div class="tab-list mb-8">
                     <button onclick="showSSEMTab('overview')" id="ssem-tab-overview" class="tab-button active">Overview</button>
-                    <button onclick="showSSEMTab('methodology')" id="ssem-tab-methodology" class="tab-button">Methodology</button>
-                    <button onclick="showSSEMTab('phases')" id="ssem-tab-phases" class="tab-button">Phases</button>
-                    <button onclick="showSSEMTab('metrics')" id="ssem-tab-metrics" class="tab-button">Metrics</button>
-                    <button onclick="showSSEMTab('implementation')" id="ssem-tab-implementation" class="tab-button">Implementation</button>
+                    <button  id="ssem-tab-methodology" class="tab-button">Model</button>
+                    <button  id="ssem-tab-metrics" class="tab-button">Metrics</button>
                 </div>
 
                 <!-- SSEM Tab Content -->
@@ -680,10 +841,10 @@
                     <div class="space-y-8">
                         <div class="card">
                             <h3 class="text-cyan-400 text-xl font-semibold mb-4">What is SSEM?</h3>
-                            <p class="text-slate-400 mb-6">Pronounced /si:m/ : A design language is to shift the conversation regarding software security.</p>
+                            <p class="text-slate-400 mb-6">Pronounced /si:m/ : A body of software engineering terms to describe the fundamental attributes of securable software. Together, these terms form a comprehensive model for understanding software security and a design language for communicating security concerns.</p>
                             <div class="text-slate-300 mb-6">
                                 <p class="mb-6">
-                                    The Securable Software Engineering Model (SSEM) is centered on providing a design language that uses established software engineering terms to define the core attributes that make software "securable" (see Section 2.1). These attributes allow SSEM to abstract security away from specialized jargon or exploit-centric views. For software engineers this enables them to confidently integrate security considerations as a natural part of their development work. It also helps security professionals identify how existing code meets security expectations and areas for improvement.
+                                    The SSEM is centered around being a design language and defining the core attributes that make software "securable" (see FIASSE RFC Section 2.1). These attributes allow SSEM to abstract security away from specialized jargon or exploit-centric views. For software engineers this enables them to confidently integrate security considerations as a natural part of their development work. It also helps security professionals identify how existing code meets security expectations and areas for improvement.
                                 </p>
                                 
                                 <div class="grid md:grid-cols-2 gap-8">
@@ -693,22 +854,22 @@
                                             <li class="flex items-start space-x-3">
                                                 <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                                                 <div>
-                                                    <span class="font-medium text-cyan-400">Security by Design:</span>
-                                                    <p class="text-sm text-slate-400">Security considerations from the earliest design phases</p>
+                                                    <span class="font-medium text-cyan-400">The Securable Principle:</span>
+                                                    <p class="text-sm text-slate-400">There is no static state of "secure".</p>
                                                 </div>
                                             </li>
                                             <li class="flex items-start space-x-3">
                                                 <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                                                 <div>
-                                                    <span class="font-medium text-cyan-400">Continuous Assessment:</span>
-                                                    <p class="text-sm text-slate-400">Ongoing security evaluation throughout development</p>
+                                                    <span class="font-medium text-cyan-400">The Derived Integrity Principle:</span>
+                                                    <p class="text-sm text-slate-400">An application does not implicitly adopt unmanaged context, for example from the client. </p>
                                                 </div>
                                             </li>
                                             <li class="flex items-start space-x-3">
                                                 <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
                                                 <div>
-                                                    <span class="font-medium text-cyan-400">Risk-Driven Approach:</span>
-                                                    <p class="text-sm text-slate-400">Prioritizing efforts based on actual risk assessments</p>
+                                                    <span class="font-medium text-cyan-400">Securable Attributes over Security Controls:</span>
+                                                    <p class="text-sm text-slate-400">Instead of focusing only on security controls or checklists, emphasize building software with inherent qualities - so it's easier to analyze, modify, test, and trust.</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -720,22 +881,22 @@
                                             <li class="flex items-start space-x-3">
                                                 <div class="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
                                                 <div>
-                                                    <span class="font-medium text-pink-400">Reduced Vulnerabilities:</span>
-                                                    <p class="text-sm text-slate-400">Early detection and prevention of security issues</p>
+                                                    <span class="font-medium text-pink-400">Resilience:</span>
+                                                    <p class="text-sm text-slate-400">Securable software can be quickly updated to fix vulnerabilities or adapt to new threats.</p>
                                                 </div>
                                             </li>
                                             <li class="flex items-start space-x-3">
                                                 <div class="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
                                                 <div>
-                                                    <span class="font-medium text-pink-400">Cost Efficiency:</span>
-                                                    <p class="text-sm text-slate-400">Lower costs through early security integration</p>
+                                                    <span class="font-medium text-pink-400">Maintainability:</span>
+                                                    <p class="text-sm text-slate-400">Code is easier to understand and change, reducing the risk of introducing new flaws over time.</p>
                                                 </div>
                                             </li>
                                             <li class="flex items-start space-x-3">
                                                 <div class="w-2 h-2 bg-pink-400 rounded-full mt-2"></div>
                                                 <div>
-                                                    <span class="font-medium text-pink-400">Compliance Ready:</span>
-                                                    <p class="text-sm text-slate-400">Built-in compliance with security standards</p>
+                                                    <span class="font-medium text-pink-400">Trustworthiness:</span>
+                                                    <p class="text-sm text-slate-400">Systems are designed so that critical facts (like prices, permissions, or states) are derived from trusted sources, not dictated by untrusted context or input.</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -746,23 +907,23 @@
 
                         <div class="grid md:grid-cols-3 gap-6">
                             <div class="card">
-                                <h4 class="text-cyan-400 text-lg font-semibold mb-3">Proactive Security</h4>
+                                <h4 class="text-cyan-400 text-lg font-semibold mb-3">Optimized for Business</h4>
                                 <p class="text-slate-300 text-sm">
-                                    SSEM shifts from reactive security patching to proactive security engineering, preventing vulnerabilities before they occur.
+                                    SSEM allows Application Security insight into development without derailing important development processes or adding toil.
                                 </p>
                             </div>
 
                             <div class="card">
                                 <h4 class="text-cyan-400 text-lg font-semibold mb-3">Developer-Centric</h4>
                                 <p class="text-slate-300 text-sm">
-                                    Designed to integrate seamlessly with existing development workflows without disrupting productivity.
+                                    Designed to align Application Security with software development principles and strategies.
                                 </p>
                             </div>
 
                             <div class="card">
                                 <h4 class="text-cyan-400 text-lg font-semibold mb-3">Scalable Framework</h4>
                                 <p class="text-slate-300 text-sm">
-                                    Adaptable to projects of any size, from small applications to enterprise-scale systems.
+                                    Adaptable to projects of any size, from small applications to high-scale systems.
                                 </p>
                             </div>
                         </div>
@@ -800,7 +961,7 @@
                                         <div class="space-y-3">
                                             <div class="metric-card">
                                                 <div class="flex justify-between items-center mb-2">
-                                                    <span class="font-medium text-cyan-400">Requirements Analysis</span>
+                                                    <span class="font-medium text-cyan-400">Requirements Participation</span>
                                                     <span class="badge status-complete">Critical</span>
                                                 </div>
                                                 <div class="progress-bar">
@@ -1470,7 +1631,7 @@
                         <div class="space-y-4">
                             <h4 class="font-semibold text-cyan-400">Get Involved</h4>
                             <ul class="space-y-2 text-slate-300">
-                                <li>• Contribute feedbac</li>
+                                <li>• Contribute feedback</li>
                                 <li>• TODO</li>
                             </ul>
                         </div>
